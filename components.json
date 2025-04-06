@@ -1,7 +1,8 @@
 [
     {
         "name": "Klipper Filament Dryer",
-        "repo": "https://github.com/Turge08/klipper_filament_dryer",
+        "repo": "Turge08/klipper_filament_dryer",
         "description": "Klipper add-on to automatically turn on a filament dryer heater based on the humidity level or manually for a specified amount of time. An optional can also be opened/closed on an interval."
+        
     }
 ]
