@@ -118,12 +118,15 @@ tr:hover {
     padding: 0;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 8px;
 }
 
 .sort-arrow {
-    font-size: 0.8em;
-    min-width: 12px; /* Ensures consistent spacing */
+    display: inline-block;
+    width: 12px;
+    font-size: 1em; /* Increased for visibility */
+    color: #4da8da; /* Match link color for contrast */
+    line-height: 1;
 }
 
 /* Links */

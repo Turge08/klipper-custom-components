@@ -37,9 +37,9 @@ function addSortListeners() {
         button.addEventListener('click', () => {
             const sortKey = button.getAttribute('data-sort');
             if (currentSortKey === sortKey) {
-                sortDirection *= -1; // Toggle direction if same column
+                sortDirection *= -1;
             } else {
-                sortDirection = 1; // Reset to ascending for new column
+                sortDirection = 1;
             }
             currentSortKey = sortKey;
             sortTable(sortKey);
@@ -65,10 +65,6 @@ function updateSortArrows() {
     arrows.forEach(arrow => {
         const button = arrow.parentElement;
         const sortKey = button.getAttribute('data-sort');
-        if (sortKey === currentSortKey) {
-            arrow.textContent = sortDirection === 1 ? '↑' : '↓';
-        } else {
-            arrow.textContent = '';
-        }
+        arrow.textContent = sortKey === currentSortKey ? (sortDirection === 1 ? '↑' : '↓') : '';
     });
 }
