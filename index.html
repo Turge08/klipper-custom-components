@@ -2,27 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Klipper Custom Components</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Klipper Custom Components</h1>
-    <p>Community-maintained list of custom components for Klipper</p>
+    <header>
+        <h1>Klipper Custom Components</h1>
+        <p>A community-driven collection of custom Klipper enhancements</p>
+    </header>
     
-    <h2>Components</h2>
-    <table id="component-table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Repository</th>
-            </tr>
-        </thead>
-        <tbody id="component-list"></tbody>
-    </table>
-    
-    <h2>Contribute</h2>
-    <p>Edit components.json and submit a PR to add your component!</p>
+    <main>
+        <section>
+            <h2>Components</h2>
+            <table id="component-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Repository</th>
+                    </tr>
+                </thead>
+                <tbody id="component-list"></tbody>
+            </table>
+        </section>
+        
+        <section>
+            <h2>Contribute</h2>
+            <p>Want to add your component? Edit <code>components.json</code> and submit a pull request!</p>
+        </section>
+    </main>
     
     <script src="script.js"></script>
 </body>
