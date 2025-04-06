@@ -8,7 +8,7 @@ fetch('components.json')
             row.innerHTML = `
                 <td data-label="Name">${component.name}</td>
                 <td data-label="Description">${component.description || 'No description provided'}</td>
-                <td data-label="Repository"><a href="${repoUrl}" target="_blank">GitHub</a></td>
+                <td data-label="Repository"><a href="${repoUrl}" target="_blank">${component.repo}</a></td>
             `;
             componentList.appendChild(row);
         });
