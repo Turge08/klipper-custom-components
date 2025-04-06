@@ -34,7 +34,7 @@ header {
 }
 
 .logo {
-    width: 50px; /* Reduced from 80px */
+    width: 50px;
     height: auto;
     border-radius: 8px;
     background-color: #ffffff;
@@ -63,6 +63,11 @@ h2 {
     margin-bottom: 20px;
     border-bottom: 2px solid #4da8da;
     padding-bottom: 5px;
+}
+
+/* Specific styling for Contribute heading */
+section:nth-child(2) h2 {
+    margin-top: 60px; /* Increased space before Contribute heading */
 }
 
 /* Table styles */
@@ -119,7 +124,7 @@ section p {
 }
 
 .disclaimer {
-    color: #ff6f61; /* Coral color for emphasis */
+    color: #ff6f61;
     font-style: italic;
     margin-top: 10px;
     font-size: 1em;
