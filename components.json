@@ -4,5 +4,24 @@
         "repo": "Turge08/klipper_filament_dryer",
         "description": "Klipper add-on to automatically turn on a filament dryer heater based on the humidity level or manually for a specified amount of time. An optional can also be opened/closed on an interval."
         
+    },
+    {
+        "name": "Filament Dryer",
+        "repo": "turge08/klipper_filament_dryer",
+        "description": "Manages filament drying during printing."
+    },
+    {
+        "name": "Auto Bed Leveler",
+        "repo": "zsmith99/klipper_auto_level",
+        "description": "Automates bed leveling for precise prints."
+    },
+    {
+        "name": "Speed Booster",
+        "repo": "printmaster/klipper_speed_boost",
+        "description": "Increases print speed without quality loss."
+    },
+    {
+        "name": "Temperature Tuner",
+        "repo": "coolguy42/klipper_temp_tune"
     }
 ]

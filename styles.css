@@ -105,16 +105,32 @@ tr:hover {
     transition: background-color 0.2s ease;
 }
 
+/* Sort buttons */
+.sort-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1em;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 0;
+}
+
+.sort-btn:hover {
+    color: #4da8da;
+}
+
 /* Links */
 a {
     color: #4da8da;
     text-decoration: none;
 }
 
-/* Disable word wrapping for repository column links */
 td:nth-of-type(3) a {
-    white-space: nowrap; /* Prevents wrapping */
-    word-break: normal; /* Overrides any inherited word-break */
+    white-space: nowrap;
+    word-break: normal;
 }
 
 a:hover {
