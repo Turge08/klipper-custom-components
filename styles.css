@@ -67,7 +67,7 @@ h2 {
 
 /* Specific styling for Contribute heading */
 section:nth-child(2) h2 {
-    margin-top: 60px; /* Increased space before Contribute heading */
+    margin-top: 60px;
 }
 
 /* Table styles */
@@ -109,7 +109,12 @@ tr:hover {
 a {
     color: #4da8da;
     text-decoration: none;
-    word-break: break-all;
+}
+
+/* Disable word wrapping for repository column links */
+td:nth-of-type(3) a {
+    white-space: nowrap; /* Prevents wrapping */
+    word-break: normal; /* Overrides any inherited word-break */
 }
 
 a:hover {
