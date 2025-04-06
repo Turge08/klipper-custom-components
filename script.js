@@ -1,4 +1,6 @@
-fetch('components.json')
+// Generate a unique query parameter to bust the cache
+const cacheBuster = new Date().getTime();
+fetch(`components.json?cb=${cacheBuster}`)
     .then(response => response.json())
     .then(data => {
         const componentList = document.getElementById('component-list');
