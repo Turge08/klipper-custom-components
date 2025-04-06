@@ -116,10 +116,14 @@ tr:hover {
     width: 100%;
     text-align: left;
     padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.sort-btn:hover {
-    color: #4da8da;
+.sort-arrow {
+    font-size: 0.8em;
+    min-width: 12px; /* Ensures consistent spacing */
 }
 
 /* Links */

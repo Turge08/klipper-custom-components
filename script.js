@@ -1,6 +1,7 @@
 const cacheBuster = new Date().getTime();
 let componentsData = [];
-let sortDirection = { name: 1, repo: 1 }; // 1 for ascending, -1 for descending
+let currentSortKey = null;
+let sortDirection = 1; // 1 for ascending, -1 for descending
 
 // Fetch and initial render
 fetch(`components.json?cb=${cacheBuster}`)
@@ -15,7 +16,7 @@ fetch(`components.json?cb=${cacheBuster}`)
 // Render table function
 function renderTable(data) {
     const componentList = document.getElementById('component-list');
-    componentList.innerHTML = ''; // Clear existing rows
+    componentList.innerHTML = '';
     data.forEach(component => {
         const repoUrl = `https://github.com/${component.repo}`;
         const row = document.createElement('tr');
@@ -26,6 +27,7 @@ function renderTable(data) {
         `;
         componentList.appendChild(row);
     });
+    updateSortArrows();
 }
 
 // Add sorting event listeners
@@ -34,6 +36,12 @@ function addSortListeners() {
     sortButtons.forEach(button => {
         button.addEventListener('click', () => {
             const sortKey = button.getAttribute('data-sort');
+            if (currentSortKey === sortKey) {
+                sortDirection *= -1; // Toggle direction if same column
+            } else {
+                sortDirection = 1; // Reset to ascending for new column
+            }
+            currentSortKey = sortKey;
             sortTable(sortKey);
         });
     });
@@ -41,13 +49,26 @@ function addSortListeners() {
 
 // Sort table function
 function sortTable(key) {
-    sortDirection[key] = sortDirection[key] * -1; // Toggle direction
     const sortedData = [...componentsData].sort((a, b) => {
         const valueA = key === 'name' ? a.name.toLowerCase() : a.repo.toLowerCase();
         const valueB = key === 'name' ? b.name.toLowerCase() : b.repo.toLowerCase();
-        if (valueA < valueB) return -sortDirection[key];
-        if (valueA > valueB) return sortDirection[key];
+        if (valueA < valueB) return -sortDirection;
+        if (valueA > valueB) return sortDirection;
         return 0;
     });
     renderTable(sortedData);
+}
+
+// Update sort arrows
+function updateSortArrows() {
+    const arrows = document.querySelectorAll('.sort-arrow');
+    arrows.forEach(arrow => {
+        const button = arrow.parentElement;
+        const sortKey = button.getAttribute('data-sort');
+        if (sortKey === currentSortKey) {
+            arrow.textContent = sortDirection === 1 ? '↑' : '↓';
+        } else {
+            arrow.textContent = '';
+        }
+    });
 }
