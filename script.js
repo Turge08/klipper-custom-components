@@ -5,9 +5,9 @@ fetch('components.json')
         data.forEach(component => {
             const row = document.createElement('tr');
             row.innerHTML = `
-                <td>${component.name}</td>
-                <td>${component.description || 'No description provided'}</td>
-                <td><a href="${component.repo}" target="_blank">GitHub</a></td>
+                <td data-label="Name">${component.name}</td>
+                <td data-label="Description">${component.description || 'No description provided'}</td>
+                <td data-label="Repository"><a href="${component.repo}" target="_blank">GitHub</a></td>
             `;
             componentList.appendChild(row);
         });
