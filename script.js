@@ -3,13 +3,13 @@ fetch('components.json')
     .then(data => {
         const componentList = document.getElementById('component-list');
         data.forEach(component => {
-            const div = document.createElement('div');
-            div.innerHTML = `
-                <h3>${component.name}</h3>
-                <p>${component.description || 'No description provided'}</p>
-                <a href="${component.repo}" target="_blank">GitHub Repository</a>
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${component.name}</td>
+                <td>${component.description || 'No description provided'}</td>
+                <td><a href="${component.repo}" target="_blank">GitHub</a></td>
             `;
-            componentList.appendChild(div);
+            componentList.appendChild(row);
         });
     })
     .catch(error => console.error('Error loading components:', error));
