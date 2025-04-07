@@ -94,7 +94,8 @@ section:nth-child(2) h2 {
 /* Table styles */
 table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate; /* Changed to separate for spacing */
+    border-spacing: 0 2px; /* 2px vertical spacing to show page background */
     background-color: #2a2a2a;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
@@ -103,8 +104,8 @@ table {
 
 th, td {
     padding: 15px;
-    border: 1px solid #1e1e1e; /* Changed to match page background */
     text-align: left;
+    border: none; /* Remove borders */
 }
 
 th {
@@ -231,8 +232,12 @@ code {
 
     tr {
         margin-bottom: 20px;
-        border: 1px solid #1e1e1e; /* Match page background */
         border-radius: 8px;
+        background-color: #2a2a2a; /* Ensure background applies to rows */
+    }
+
+    tr:nth-child(even) {
+        background-color: #323232;
     }
 
     td {
