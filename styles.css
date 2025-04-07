@@ -23,6 +23,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
+    transition: padding 0.3s ease; /* Smooth transition for shrinking */
 }
 
 .header-content {
@@ -39,17 +40,37 @@ header {
     border-radius: 8px;
     background-color: #ffffff;
     padding: 5px;
+    transition: width 0.3s ease;
 }
 
 .header-text h1 {
     font-size: 2.2em;
     color: #ffffff;
     margin-bottom: 5px;
+    transition: font-size 0.3s ease;
 }
 
 .header-text p {
     color: #b0b0b0;
     font-size: 1.1em;
+    transition: font-size 0.3s ease;
+}
+
+/* Shrunk state */
+header.shrunk {
+    padding: 10px;
+}
+
+header.shrunk .logo {
+    width: 30px;
+}
+
+header.shrunk .header-text h1 {
+    font-size: 1.5em;
+}
+
+header.shrunk .header-text p {
+    font-size: 0.9em;
 }
 
 /* Main content */
@@ -124,8 +145,8 @@ tr:hover {
 .sort-arrow {
     display: inline-block;
     width: 12px;
-    font-size: 1em; /* Increased for visibility */
-    color: #4da8da; /* Match link color for contrast */
+    font-size: 1em;
+    color: #4da8da;
     line-height: 1;
 }
 
@@ -170,10 +191,32 @@ code {
     .header-content {
         flex-direction: column;
         text-align: center;
+        gap: 10px; /* Reduced gap */
     }
 
     .logo {
-        margin-bottom: 15px;
+        width: 40px; /* Smaller initial size on mobile */
+        margin-bottom: 0;
+    }
+
+    .header-text h1 {
+        font-size: 1.8em; /* Smaller initial size */
+    }
+
+    .header-text p {
+        font-size: 0.95em; /* Smaller initial size */
+    }
+
+    header.shrunk .logo {
+        width: 25px; /* Even smaller when scrolled */
+    }
+
+    header.shrunk .header-text h1 {
+        font-size: 1.2em;
+    }
+
+    header.shrunk .header-text p {
+        font-size: 0.8em;
     }
 
     table, thead, tbody, th, td, tr {
