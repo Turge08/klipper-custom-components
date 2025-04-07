@@ -1,9 +1,5 @@
 /* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -57,26 +53,13 @@ header {
 }
 
 /* Shrunk state */
-header.shrunk {
-    padding: 10px;
-}
-
-header.shrunk .logo {
-    width: 30px;
-}
-
-header.shrunk .header-text h1 {
-    font-size: 1.5em;
-}
-
-header.shrunk .header-text p {
-    font-size: 0.9em;
-}
+header.shrunk { padding: 10px; }
+header.shrunk .logo { width: 30px; }
+header.shrunk .header-text h1 { font-size: 1.5em; }
+header.shrunk .header-text p { font-size: 0.9em; }
 
 /* Main content */
-main {
-    padding: 30px 0;
-}
+main { padding: 30px 0; }
 
 h2 {
     font-size: 1.8em;
@@ -86,26 +69,22 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* Specific styling for Contribute heading */
-section:nth-child(2) h2 {
-    margin-top: 60px;
-}
+section:nth-child(2) h2 { margin-top: 60px; }
 
 /* Table styles */
 table {
     width: 100%;
-    border-collapse: separate; /* Changed to separate for spacing */
-    border-spacing: 0 2px; /* 2px vertical spacing to show page background */
+    border-collapse: separate;
+    border-spacing: 0 8px; /* 8px spacing between rows */
     background-color: #2a2a2a;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    overflow: hidden;
 }
 
 th, td {
     padding: 15px;
+    border: 1px solid #3a3a3a;
     text-align: left;
-    border: none; /* Remove borders */
+    border-radius: 8px;
 }
 
 th {
@@ -114,18 +93,10 @@ th {
     font-weight: 700;
 }
 
-td {
-    color: #d0d0d0;
-}
+td { color: #d0d0d0; }
 
-tr:nth-child(even) {
-    background-color: #323232;
-}
-
-tr:hover {
-    background-color: #404040;
-    transition: background-color 0.2s ease;
-}
+tr:nth-child(even) { background-color: #323232; }
+tr:hover { background-color: #404040; transition: background-color 0.2s ease; }
 
 /* Sort buttons */
 .sort-btn {
@@ -152,100 +123,28 @@ tr:hover {
 }
 
 /* Links */
-a {
-    color: #4da8da;
-    text-decoration: none;
-}
-
-td:nth-of-type(3) a {
-    white-space: nowrap;
-    word-break: normal;
-}
-
-a:hover {
-    color: #72c2f1;
-    text-decoration: underline;
-}
+a { color: #4da8da; text-decoration: none; }
+td:nth-of-type(3) a { white-space: nowrap; word-break: normal; }
+a:hover { color: #72c2f1; text-decoration: underline; }
 
 /* Contribute section */
-section p {
-    color: #b0b0b0;
-    font-size: 1.1em;
-}
-
-.disclaimer {
-    color: #ff6f61;
-    font-style: italic;
-    margin-top: 10px;
-    font-size: 1em;
-}
-
-code {
-    background-color: #333;
-    padding: 3px 8px;
-    border-radius: 4px;
-    color: #ff6f61;
-}
+section p { color: #b0b0b0; font-size: 1.1em; }
+.disclaimer { color: #ff6f61; font-style: italic; margin-top: 10px; font-size: 1em; }
+code { background-color: #333; padding: 3px 8px; border-radius: 4px; color: #ff6f61; }
 
 /* Responsive design */
 @media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .logo {
-        width: 40px;
-        margin-bottom: 0;
-    }
-
-    .header-text h1 {
-        font-size: 1.8em;
-    }
-
-    .header-text p {
-        font-size: 0.95em;
-    }
-
-    header.shrunk .logo {
-        width: 25px;
-    }
-
-    header.shrunk .header-text h1 {
-        font-size: 1.2em;
-    }
-
-    header.shrunk .header-text p {
-        font-size: 0.8em;
-    }
-
-    table, thead, tbody, th, td, tr {
-        display: block;
-    }
-
-    thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    }
-
-    tr {
-        margin-bottom: 20px;
-        border-radius: 8px;
-        background-color: #2a2a2a; /* Ensure background applies to rows */
-    }
-
-    tr:nth-child(even) {
-        background-color: #323232;
-    }
-
-    td {
-        border: none;
-        position: relative;
-        padding-left: 50%;
-    }
-
+    .header-content { flex-direction: column; text-align: center; gap: 10px; }
+    .logo { width: 40px; margin-bottom: 0; }
+    .header-text h1 { font-size: 1.8em; }
+    .header-text p { font-size: 0.95em; }
+    header.shrunk .logo { width: 25px; }
+    header.shrunk .header-text h1 { font-size: 1.2em; }
+    header.shrunk .header-text p { font-size: 0.8em; }
+    table, thead, tbody, th, td, tr { display: block; }
+    thead tr { position: absolute; top: -9999px; left: -9999px; }
+    tr { margin-bottom: 20px; border: 1px solid #3a3a3a; border-radius: 8px; }
+    td { border: none; position: relative; padding-left: 50%; }
     td:before {
         position: absolute;
         left: 15px;
@@ -253,7 +152,6 @@ code {
         font-weight: 700;
         color: #ffffff;
     }
-
     td:nth-of-type(1):before { content: "Name"; }
     td:nth-of-type(2):before { content: "Description"; }
     td:nth-of-type(3):before { content: "Repository"; }
