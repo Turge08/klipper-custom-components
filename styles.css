@@ -23,7 +23,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    transition: padding 0.3s ease; /* Smooth transition for shrinking */
+    transition: padding 0.3s ease;
 }
 
 .header-content {
@@ -103,7 +103,7 @@ table {
 
 th, td {
     padding: 15px;
-    border: 1px solid #3a3a3a;
+    border: 1px solid #1e1e1e; /* Changed to match page background */
     text-align: left;
 }
 
@@ -191,24 +191,24 @@ code {
     .header-content {
         flex-direction: column;
         text-align: center;
-        gap: 10px; /* Reduced gap */
+        gap: 10px;
     }
 
     .logo {
-        width: 40px; /* Smaller initial size on mobile */
+        width: 40px;
         margin-bottom: 0;
     }
 
     .header-text h1 {
-        font-size: 1.8em; /* Smaller initial size */
+        font-size: 1.8em;
     }
 
     .header-text p {
-        font-size: 0.95em; /* Smaller initial size */
+        font-size: 0.95em;
     }
 
     header.shrunk .logo {
-        width: 25px; /* Even smaller when scrolled */
+        width: 25px;
     }
 
     header.shrunk .header-text h1 {
@@ -231,7 +231,7 @@ code {
 
     tr {
         margin-bottom: 20px;
-        border: 1px solid #3a3a3a;
+        border: 1px solid #1e1e1e; /* Match page background */
         border-radius: 8px;
     }
 
