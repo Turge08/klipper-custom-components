@@ -75,8 +75,8 @@ section:nth-child(2) h2 { margin-top: 60px; }
 table {
     width: 100%;
     border-collapse: separate;
-    border-spacing: 0 8px; /* 8px spacing between rows */
-    background-color: #2a2a2a;
+    border-spacing: 0 8px;
+    background-color: #1e1e1e; /* Match page background */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
@@ -95,7 +95,8 @@ th {
 
 td { color: #d0d0d0; }
 
-tr:nth-child(even) { background-color: #323232; }
+tr:nth-child(odd) { background-color: #2a2a2a; } /* Light grey */
+tr:nth-child(even) { background-color: #353535; } /* Slightly darker grey */
 tr:hover { background-color: #404040; transition: background-color 0.2s ease; }
 
 /* Sort buttons */
@@ -144,6 +145,8 @@ code { background-color: #333; padding: 3px 8px; border-radius: 4px; color: #ff6
     table, thead, tbody, th, td, tr { display: block; }
     thead tr { position: absolute; top: -9999px; left: -9999px; }
     tr { margin-bottom: 20px; border: 1px solid #3a3a3a; border-radius: 8px; }
+    tr:nth-child(odd) { background-color: #2a2a2a; }
+    tr:nth-child(even) { background-color: #353535; }
     td { border: none; position: relative; padding-left: 50%; }
     td:before {
         position: absolute;
