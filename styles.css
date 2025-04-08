@@ -139,7 +139,7 @@ code { background-color: #333; padding: 3px 8px; border-radius: 4px; color: #ff6
 /* Responsive design */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: row; /* Logo left, text right */
+        flex-direction: row;
         text-align: left;
         gap: 10px;
     }
@@ -161,8 +161,12 @@ code { background-color: #333; padding: 3px 8px; border-radius: 4px; color: #ff6
     tr { margin-bottom: 20px; border: 1px solid #3a3a3a; border-radius: 8px; }
     tr:nth-child(odd) { background-color: #2a2a2a; }
     tr:nth-child(even) { background-color: #353535; }
-    td { border: none; position: relative; padding-left: 50%; }
-    td:nth-of-type(3) a { white-space: normal; word-break: break-all; } /* Word wrap for repo */
+    td { 
+        border: none; 
+        position: relative; 
+        padding-left: 35%; /* Reduced from 50% to shrink space */
+    }
+    td:nth-of-type(3) a { white-space: normal; word-break: break-all; }
     td:before {
         position: absolute;
         left: 15px;
